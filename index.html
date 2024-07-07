@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Reviews</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Amazon Reviews</h1>
+    <div id="controls">
+        <select id="sentiment">
+            <option value="">All</option>
+            <option value="positive">Positive</option>
+            <option value="negative">Negative</option>
+        </select>
+        <button id="load-reviews">Load Reviews</button>
+        <button id="export-reviews">Export to Excel</button>
+        <input type="text" id="word-search" placeholder="Enter word to search similar words">
+        <button id="search-word">Search Similar Words</button>
+    </div>
+    <div id="top-words-container"></div>
+    <div id="reviews-container"></div>
+<!--    <div id="similar-words-container"></div>-->
+    <div class="pagination">
+        <span id="page-info"></span>
+        <button id="next-page" disabled>Next</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
